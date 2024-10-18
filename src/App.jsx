@@ -124,13 +124,13 @@ function App() {
          <span className='text-white'> Generator</span>
         </h1>
         <div className='w-[42rem] h-[4.75rem] mx-auto text-white text-[1.625rem] font-medium rounded-[1rem] overflow-hidden mt-[2.25rem] shadow-custom'>
-        <button className={`w-[50%] h-[100%] ${assignment ? 'bg-lavender rounded-r-[1rem]' : 'bg-darkPurple'}`} onClick={selectAssignment}>Assignment</button>
-        <button className={`w-[50%] h-[100%] ${labReport ? 'bg-lavender rounded-l-[1rem]' : 'bg-darkPurple'}`} onClick={selectLabReport}>Lab Report</button>
+        <button className={`w-[50%] h-[100%] ${assignment ? 'bg-lavender rounded-r-[1rem] hover:bg-[#8C4BD5] transition duration-300' : 'bg-darkPurple hover:bg-[#291D4D] transition duration-300'}`} onClick={selectAssignment}>Assignment</button>
+        <button className={`w-[50%] h-[100%] ${labReport ? 'bg-lavender rounded-l-[1rem] hover:bg-[#8C4BD5] transition duration-300' : 'bg-darkPurple hover:bg-[#291D4D] transition duration-300'}`} onClick={selectLabReport}>Lab Report</button>
         </div>
         <form className='w-[42rem] mx-auto mt-[1.75rem]'>
           {/* roll input */}
           <input
-            type="text"
+            type="number"
             name="Roll"
             placeholder='Roll'
             className='w-[100%] h-[3.75rem] mx-auto text-white text-[1.625rem] font-medium rounded-[1rem] overflow-hidden bg-darkPurple placeholder:text-white pl-4'
@@ -214,7 +214,7 @@ function App() {
                   className='w-[100%] h-[auto] object-cover m-0'
                 />
                 <div 
-                className={`absolute top-0 left-0 w-[100%] h-[100%] ${item.id === id ? 'bg-black bg-opacity-50' : 'bg-transparent'}`}
+                className={`absolute top-0 left-0 w-[100%] h-[100%] hover:cursor-pointer ${item.id === id ? 'bg-black bg-opacity-50' : 'bg-transparent'}`}
                 onClick={() => showPreview(item.id, item.img_src)}
                 >
                 { 
@@ -230,7 +230,7 @@ function App() {
 
         {/* download button */}
         <div className='w-[100%] text-center mt-12 relative'>
-        <button className='w-[36rem] h-[5.625rem] bg-lavender rounded-[1rem] text-white text-[1.625rem] font-medium' 
+        <button className='w-[36rem] h-[5.625rem] bg-lavender hover:bg-[#8C4BD5] rounded-[1rem] text-white text-[1.625rem] font-medium transition duration-300' 
         onClick={handleDownloadPDF}>
           Download PDF
         </button>
