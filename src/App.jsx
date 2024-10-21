@@ -116,24 +116,24 @@ function App() {
   };
 
   return (
-    <div className="App bg-purple pt-[7rem] pb-[7rem]">
-      <h1 className='text-[64px] text-center font-semibold'>
+    <div className="App bg-purple py-[3rem] md:py-[7rem]">
+      <h1 className='text-[2rem] md:text-[4rem] text-center font-semibold px-[5vw]'>
         <span className='text-lavender'>
           Cover Page
         </span>
          <span className='text-white'> Generator</span>
         </h1>
-        <div className='w-[42rem] h-[4.75rem] mx-auto text-white text-[1.625rem] font-medium rounded-[1rem] overflow-hidden mt-[2.25rem] shadow-custom'>
+        <div className='w-[90vw] md:w-[42rem] h-[3.75rem] md:h-[4.75rem] mx-auto text-white text-[1.25rem] md:text-[1.625rem] font-medium rounded-[1rem] overflow-hidden mt-[2.25rem] shadow-custom'>
         <button className={`w-[50%] h-[100%] ${assignment ? 'bg-lavender rounded-r-[1rem] hover:bg-[#8C4BD5] transition duration-300' : 'bg-darkPurple hover:bg-[#291D4D] transition duration-300'}`} onClick={selectAssignment}>Assignment</button>
         <button className={`w-[50%] h-[100%] ${labReport ? 'bg-lavender rounded-l-[1rem] hover:bg-[#8C4BD5] transition duration-300' : 'bg-darkPurple hover:bg-[#291D4D] transition duration-300'}`} onClick={selectLabReport}>Lab Report</button>
         </div>
-        <form className='w-[42rem] mx-auto mt-[1.75rem]'>
+        <form className='w-[90vw] md:w-[42rem] mx-auto mt-[1.75rem]'>
           {/* roll input */}
           <input
             type="number"
             name="Roll"
             placeholder='Roll'
-            className='w-[100%] h-[3.75rem] mx-auto text-white text-[1.625rem] font-medium rounded-[1rem] overflow-hidden bg-darkPurple placeholder:text-white pl-4'
+            className='w-[100%] h-[3.25rem] md:h-[3.75rem] mx-auto text-white text-[1.25rem] md:text-[1.625rem] font-medium rounded-[1rem] overflow-hidden bg-darkPurple placeholder:text-white pl-4'
           />
 
           {/* select semester*/}
@@ -141,7 +141,7 @@ function App() {
           <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className='w-[100%] h-[3.75rem] text-white text-[1.625rem] font-medium rounded-[1rem] overflow-hidden bg-darkPurple placeholder:text-white px-4 text-start flex justify-between items-center'
+          className='w-[100%] h-[3.25rem] md:h-[3.75rem] text-white text-[1.25rem] md:text-[1.625rem] font-medium rounded-[1rem] overflow-hidden bg-darkPurple placeholder:text-white px-4 text-start flex justify-between items-center'
           >
             {selectedSemester ||"Select Semester"}
             <FiChevronDown className={`transform ${isOpen ? 'rotate-180' : 'rotate-0'} transition-transform duration-300`} />
@@ -166,7 +166,7 @@ function App() {
           <button
           type="button"
           onClick={() => setIsCourseOpen(!isCourseOpen)}
-          className='w-[100%] h-[3.75rem] text-white text-[1.625rem] font-medium rounded-[1rem] overflow-hidden bg-darkPurple placeholder:text-white px-4 text-start flex justify-between items-center'
+          className='w-[100%] h-[3.25rem] md:h-[3.75rem] text-white text-[1.25rem] md:text-[1.625rem] font-medium rounded-[1rem] overflow-hidden bg-darkPurple placeholder:text-white px-4 text-start flex justify-between items-center'
           >
             {selectedCourse ||"Select Course"}
             <FiChevronDown className={`transform ${isCourseOpen ? 'rotate-180' : 'rotate-0'} transition-transform duration-300`} />
@@ -191,11 +191,11 @@ function App() {
             type="text"
             name="teacher"
             placeholder='Teacher’s Name'
-            className='w-[100%] h-[3.75rem] mx-auto text-white text-[1.625rem] font-medium rounded-[1rem] overflow-hidden bg-darkPurple placeholder:text-white pl-4 mt-4'
+            className='w-[100%] h-[3.25rem] md:h-[3.75rem] mx-auto text-white text-[1.25rem] md:text-[1.625rem] font-medium rounded-[1rem] overflow-hidden bg-darkPurple placeholder:text-white pl-4 mt-4'
           />
         </form>
 
-        <h1 className='text-[64px] text-center font-semibold my-8'>
+        <h1 className='text-[2rem] md:text-[4rem] text-center font-semibold my-8'>
         <span className='text-lavender'>
            Select
         </span>
@@ -203,11 +203,11 @@ function App() {
         </h1>
 
         {/* select design */}
-        <div className='flex flex-wrap justify-between w-[80%] mx-auto'>
+        <div className='flex flex-wrap justify-between w-[90%] md:w-[80%] mx-auto'>
           {
             template.map((item) => {
               return (
-                <div className='w-[30%] mb-12 relative' key={item.id}> 
+                <div className='w-[48%] md:w-[30%] mb-12 relative' key={item.id}> 
                 <img
                   src={item.img_src}
                   alt="template"
@@ -219,7 +219,7 @@ function App() {
                 >
                 { 
                   item.id === id &&
-                  <AiFillCheckCircle className="text-purple text-4xl mt-4 ml-4" />
+                  <AiFillCheckCircle className="text-purple text-4xl mt-2 ml-2 md:mt-4 md:ml-4" />
                 }
                 </div>
                 </div>
@@ -230,17 +230,17 @@ function App() {
 
         {/* download button */}
         <div className='w-[100%] text-center mt-12 relative'>
-        <button className='w-[36rem] h-[5.625rem] bg-lavender hover:bg-[#8C4BD5] rounded-[1rem] text-white text-[1.625rem] font-medium transition duration-300' 
+        <button className='w-[90%] md:w-[40vw] h-[5rem] md:h-[5.625rem] mx-auto bg-lavender hover:bg-[#8C4BD5] rounded-[1rem] text-white text-[1.25rem] md:text-[1.625rem] font-medium transition duration-300' 
         onClick={handleDownloadPDF}>
           Download PDF
         </button>
-        <IoCloudDownload className='absolute right-[31rem] top-1/2 transform -translate-y-1/2 text-darkPurple text-[2.625rem] font-medium' 
+        <IoCloudDownload className='absolute right-[8vw] md:right-[31vw] top-1/2 transform -translate-y-1/2 text-darkPurple text-[2rem] md:text-[2.625rem] font-medium' 
         onClick={handleDownloadPDF}
         />
         </div>
         
         {/* footer */}
-        <footer className='text-lavender text-[1.625rem] font-medium mt-16'>
+        <footer className='text-lavender text-[1.25rem] md:text-[1.625rem] font-medium mt-16'>
           <p className='text-center'>© 2024 All Rights Reserved</p>
           <div className='flex justify-center items-center gap-4 mt-4'>
           <div>
@@ -259,3 +259,13 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+
